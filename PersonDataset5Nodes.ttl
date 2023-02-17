@@ -1,0 +1,57 @@
+PREFIX : <http://example-graph.com/>  
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Anna
+:Anna a :Person ;
+  :name "Anna Meier" ;
+  :gender "Female" ;
+  :born_on "2000-08-21"^^xsd:date ;
+  :friend :Paul ;
+  :love :Oskar ;
+  :drives :Bicycle ;
+  :personality_trait "Cunning" , "Charismatic" , "Caring" .
+
+:Bicycle a :Means_Of_Transportation ;
+  :brand "Pegasus" .
+
+# Paul
+:Paul a :Person ;
+  :name "Paul Müller" ;
+  :gender "Male" ;
+  :born_on "1985-08-21"^^xsd:date ;
+  :friend :Oskar ;
+  :hate :Fred ;
+  :drives :Car1 ;
+  :personality_trait "Empathetic" , "Fair" , "Helpful" .
+
+:Car1 a :Means_Of_Transportation ;
+  :brand "Audi" ;
+  :type "A1" ;
+  :bj "2001-08"^^xsd:date .
+
+# Fred
+:Fred a :Person ;
+  :name "Fred Schulz" ;
+  :gender "Male" ;
+  :born_on "1993-08-21"^^xsd:date ;
+  :friend :Jane  ;
+  :personality_trait "Focused" , "Hardworking" , "Loyal" .
+
+# Oskar
+:Oskar a :Person ;
+  :name "Oskar Muster" ;
+  :gender "Male" ;
+  :born_on "1985-03-31"^^xsd:date ;
+  :friend :Jane ;
+  :hate :Fred ;
+  :personality_trait "Friendly" , "Charismatic" , "Smart" .
+
+# Jane
+:Jane a :Person ;
+  :name "Jane Schmitz" ;
+  :gender "Female" ;
+  :born_on "1982-04-26"^^xsd:date ;
+  :friend :Anna ;
+  :hate :Fred ;
+  :personality_trait "Modest" , "Perfectionist" , "Objective" .
